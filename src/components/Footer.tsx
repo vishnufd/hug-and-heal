@@ -12,7 +12,7 @@ export function Footer() {
   };
 
   return (
-    <footer id="contact" className="bg-[#132330] text-slate-300 py-16 mt-auto border-none">
+    <footer className="bg-[#132330] text-slate-300 py-16 mt-auto border-none">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
 

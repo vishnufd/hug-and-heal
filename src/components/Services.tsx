@@ -29,6 +29,11 @@ export function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {[
             {
+              icon: <Activity className="w-6 h-6 text-brand-red" />,
+              title: "Psychotherapy",
+              desc: "In-depth therapy to address deep-rooted emotional and psychological issues."
+            },
+            {
               icon: <MessageCircle className="w-6 h-6 text-brand-red" />,
               title: "Counselling",
               desc: "Guidance to help you navigate life's various emotional challenges."
@@ -74,11 +79,6 @@ export function Services() {
               desc: "Guided interventions to break unhealthy screen habits and reconnect."
             },
             {
-              icon: <Activity className="w-6 h-6 text-brand-red" />,
-              title: "Psychotherapy",
-              desc: "In-depth therapy to address deep-rooted emotional and psychological issues."
-            },
-            {
               icon: <Shield className="w-6 h-6 text-brand-red" />,
               title: "Trauma Recovery",
               desc: "A safe environment to help you heal from past traumatic experiences."
@@ -97,8 +97,8 @@ export function Services() {
             <div
               key={idx}
               className={`bg-white p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-neutral-100 hover:shadow-xl hover:border-brand-red/20 transition-all group hover:-translate-y-1 flex flex-col items-start ${idx === arr.length - 1
-                  ? 'md:col-span-2 lg:col-span-3 xl:col-span-4 place-self-center w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)]'
-                  : ''
+                ? 'md:col-span-2 lg:col-span-3 xl:col-span-4 place-self-center w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)]'
+                : ''
                 }`}
             >
               <div className="w-12 h-12 rounded-xl bg-brand-red/5 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-brand-red/10 transition-transform">

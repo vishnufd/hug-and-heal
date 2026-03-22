@@ -22,7 +22,7 @@ export function Team() {
           <div className="group relative bg-white rounded-4xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-2xl hover:shadow-brand-red/5 transition-all duration-300">
             {/* Large photo banner */}
             <div className="relative w-full h-72 sm:h-80 overflow-hidden">
-              <div className="absolute inset-0 bg-brand-red/10 transition-transform duration-300 group-hover:scale-105" />
+              <div className="absolute inset-0  transition-transform duration-300 group-hover:scale-105" />
               <img src={image1} alt="Muhammed Ismail Ayyanari" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
               <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
             </div>
@@ -47,7 +47,7 @@ export function Team() {
           <div className="group relative bg-white rounded-4xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-2xl hover:shadow-brand-red/5 transition-all duration-300">
             {/* Large photo banner */}
             <div className="relative w-full h-72 sm:h-80 overflow-hidden">
-              <div className="absolute inset-0 bg-brand-red/10 transition-transform duration-300 group-hover:scale-105" />
+              <div className="absolute inset-0  transition-transform duration-300 group-hover:scale-105" />
               <img src={image2} alt="Noora Beevi S" className="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
               <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
             </div>

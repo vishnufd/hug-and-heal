@@ -1,4 +1,4 @@
-import {  useState, useEffect  } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 import logo from '../assets/hug& heal.png';
@@ -29,7 +29,7 @@ export function Navbar() {
   const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     setMobileMenuOpen(false);
-    
+
     const element = document.getElementById(id);
     if (element) {
       // Adding a small offset for the fixed header
@@ -56,7 +56,7 @@ export function Navbar() {
           <a href="#why-us" onClick={(e) => scrollTo(e, 'why-us')} className="hover:text-brand-red transition-colors">Why Us</a>
           <a href="#team" onClick={(e) => scrollTo(e, 'team')} className="hover:text-brand-red transition-colors">Our Team</a>
           <a href="#about" onClick={(e) => scrollTo(e, 'about')} className="hover:text-brand-red transition-colors">About</a>
-          <a href="#contact" onClick={(e) => scrollTo(e, 'contact')} className="hover:text-brand-red transition-colors">Contact</a>
+          <a href="#book-session" onClick={(e) => scrollTo(e, 'book-session')} className="hover:text-brand-red transition-colors">Contact</a>
         </nav>
 
         <div className="hidden md:block">
@@ -90,7 +90,7 @@ export function Navbar() {
         <a href="#why-us" onClick={(e) => scrollTo(e, 'why-us')} className="text-lg font-medium py-2 border-b border-neutral-100">Why Us</a>
         <a href="#team" onClick={(e) => scrollTo(e, 'team')} className="text-lg font-medium py-2 border-b border-neutral-100">Our Team</a>
         <a href="#about" onClick={(e) => scrollTo(e, 'about')} className="text-lg font-medium py-2 border-b border-neutral-100">About</a>
-        <a href="#contact" onClick={(e) => scrollTo(e, 'contact')} className="text-lg font-medium py-2 mb-4">Contact</a>
+        <a href="#book-session" onClick={(e) => scrollTo(e, 'book-session')} className="text-lg font-medium py-2 mb-4">Contact</a>
         <a
           href="#book-session"
           onClick={(e) => scrollTo(e, 'book-session')}
