@@ -20,12 +20,14 @@ export function Team() {
 
           {/* Card 1 */}
           <div className="group relative bg-white rounded-4xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-2xl hover:shadow-brand-red/5 transition-all duration-300">
-            <div className="p-8 md:p-10 relative h-full flex flex-col">
-              <div className="mb-6 relative w-24 h-24 sm:w-28 sm:h-28 shrink-0">
-                <div className="absolute inset-0 bg-brand-red/10 rounded-2xl rotate-3 transition-transform duration-300 group-hover:rotate-6"></div>
-                <img src={image1} alt="Muhammed Ismail Ayyanari" className="absolute inset-0 w-full h-full rounded-2xl object-cover shadow-sm border-2 border-white" loading="lazy" decoding="async" />
-              </div>
-              <h4 className="text-2xl md:text-3xl font-bold font-display text-neutral-900 mb-2 mt-2">MUHAMMED ISMAIL AYYANARI</h4>
+            {/* Large photo banner */}
+            <div className="relative w-full h-72 sm:h-80 overflow-hidden">
+              <div className="absolute inset-0 bg-brand-red/10 transition-transform duration-300 group-hover:scale-105" />
+              <img src={image1} alt="Muhammed Ismail Ayyanari" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
+            </div>
+            <div className="p-8 md:p-10 relative flex flex-col">
+              <h4 className="text-2xl md:text-3xl font-bold font-display text-neutral-900 mb-2">MUHAMMED ISMAIL AYYANARI</h4>
               <p className="text-brand-red font-semibold text-sm tracking-widest uppercase mb-8">SENIOR CONSULTANT PSYCHOLOGIST</p>
 
               <div className="mt-auto space-y-4 bg-neutral-50 p-6 rounded-2xl">
@@ -43,12 +45,14 @@ export function Team() {
 
           {/* Card 2 */}
           <div className="group relative bg-white rounded-4xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-2xl hover:shadow-brand-red/5 transition-all duration-300">
-            <div className="p-8 md:p-10 relative h-full flex flex-col">
-              <div className="mb-6 relative w-24 h-24 sm:w-28 sm:h-28 shrink-0">
-                <div className="absolute inset-0 bg-brand-red/10 rounded-2xl -rotate-3 transition-transform duration-300 group-hover:-rotate-6"></div>
-                <img src={image2} alt="Noora Beevi S" className="absolute inset-0 w-full h-full rounded-2xl object-cover shadow-sm border-2 border-white" loading="lazy" decoding="async" />
-              </div>
-              <h4 className="text-2xl md:text-3xl font-bold font-display text-neutral-900 mb-2 mt-2">NOORA BEEVI.S</h4>
+            {/* Large photo banner */}
+            <div className="relative w-full h-72 sm:h-80 overflow-hidden">
+              <div className="absolute inset-0 bg-brand-red/10 transition-transform duration-300 group-hover:scale-105" />
+              <img src={image2} alt="Noora Beevi S" className="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
+            </div>
+            <div className="p-8 md:p-10 relative flex flex-col">
+              <h4 className="text-2xl md:text-3xl font-bold font-display text-neutral-900 mb-2">NOORA BEEVI.S</h4>
               <p className="text-brand-red font-semibold text-sm tracking-widest uppercase mb-8">CONSULTANT, ASST. COUNSELLER & PSYCHOTHERAPIST</p>
 
               <div className="mt-auto space-y-4 bg-neutral-50 p-6 rounded-2xl">

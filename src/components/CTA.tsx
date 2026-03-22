@@ -1,5 +1,5 @@
 import { Heart, MessageCircle } from 'lucide-react';
-import { WHATSAPP_LINK } from '../constants';
+
 
 export function CTA() {
   return (
@@ -18,9 +18,12 @@ export function CTA() {
               Ready to take the first step towards healing?
             </h2>
             <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#book-session"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById('book-session');
+                if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+              }}
               className="bg-white text-brand-red hover:bg-neutral-50 px-8 py-5 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-2xl hover:scale-105 inline-flex items-center gap-3"
             >
               <MessageCircle size={28} className="fill-brand-red" />

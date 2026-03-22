@@ -1,5 +1,6 @@
 import { Heart, CalendarCheck, ArrowRight, Activity } from 'lucide-react';
-import { WHATSAPP_LINK } from '../constants';
+
+import banner from "../assets/banner.png"
 
 export function Hero() {
   return (
@@ -23,9 +24,12 @@ export function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#book-session"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById('book-session');
+                if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+              }}
               className="inline-flex items-center justify-center gap-2 bg-brand-red hover:bg-brand-red/80 text-white px-8 py-4 rounded-full font-medium text-lg transition-all shadow-md"
             >
               <CalendarCheck size={20} />
@@ -49,9 +53,9 @@ export function Hero() {
         <div className="relative">
           <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl aspect-4/5 md:aspect-square">
             <img
-              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=1000"
-              alt="Therapy session"
-              className="w-full h-full object-cover" loading="eager" fetchPriority="high"
+              src={banner}
+              alt="Multiple hands holding together symbolizing support"
+              className="w-full h-full object-cover" loading="eager"
             />
             <div className="absolute inset-0 bg-linear-to- from-black/20 to-transparent"></div>
           </div>

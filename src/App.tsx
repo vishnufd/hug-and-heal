@@ -3,6 +3,7 @@ import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { WhyUs } from './components/WhyUs';
 import { Team } from './components/Team';
+import { BookSession } from './components/BookSession';
 import { About } from './components/About';
 import { CTA } from './components/CTA';
 import { Footer } from './components/Footer';
@@ -16,6 +17,7 @@ function App() {
         <Services />
         <WhyUs />
         <Team />
+        <BookSession />
         <About />
         <CTA />
       </main>

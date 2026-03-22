@@ -1,6 +1,6 @@
 import {  useState, useEffect  } from 'react';
 import { Menu, X } from 'lucide-react';
-import { WHATSAPP_LINK } from '../constants';
+
 import logo from '../assets/hug& heal.png';
 
 export function Navbar() {
@@ -61,9 +61,8 @@ export function Navbar() {
 
         <div className="hidden md:block">
           <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#book-session"
+            onClick={(e) => scrollTo(e, 'book-session')}
             className="bg-brand-red hover:bg-brand-red/80 text-white px-6 py-2.5 rounded-full font-medium transition-all hover:-translate-y-0.5 shadow-md"
           >
             Book Session
@@ -93,9 +92,8 @@ export function Navbar() {
         <a href="#about" onClick={(e) => scrollTo(e, 'about')} className="text-lg font-medium py-2 border-b border-neutral-100">About</a>
         <a href="#contact" onClick={(e) => scrollTo(e, 'contact')} className="text-lg font-medium py-2 mb-4">Contact</a>
         <a
-          href={WHATSAPP_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#book-session"
+          onClick={(e) => scrollTo(e, 'book-session')}
           className="bg-brand-red text-white text-center px-6 py-3 rounded-full font-medium shadow-[0_4px_14px_0_rgba(225,29,72,0.39)]"
         >
           Book Session
