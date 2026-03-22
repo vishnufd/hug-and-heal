@@ -56,7 +56,6 @@ export function Navbar() {
           <a href="#why-us" onClick={(e) => scrollTo(e, 'why-us')} className="hover:text-brand-red transition-colors">Why Us</a>
           <a href="#team" onClick={(e) => scrollTo(e, 'team')} className="hover:text-brand-red transition-colors">Our Team</a>
           <a href="#about" onClick={(e) => scrollTo(e, 'about')} className="hover:text-brand-red transition-colors">About</a>
-          <a href="#book-session" onClick={(e) => scrollTo(e, 'book-session')} className="hover:text-brand-red transition-colors">Contact</a>
         </nav>
 
         <div className="hidden md:block">
@@ -90,7 +89,6 @@ export function Navbar() {
         <a href="#why-us" onClick={(e) => scrollTo(e, 'why-us')} className="text-lg font-medium py-2 border-b border-neutral-100">Why Us</a>
         <a href="#team" onClick={(e) => scrollTo(e, 'team')} className="text-lg font-medium py-2 border-b border-neutral-100">Our Team</a>
         <a href="#about" onClick={(e) => scrollTo(e, 'about')} className="text-lg font-medium py-2 border-b border-neutral-100">About</a>
-        <a href="#book-session" onClick={(e) => scrollTo(e, 'book-session')} className="text-lg font-medium py-2 mb-4">Contact</a>
         <a
           href="#book-session"
           onClick={(e) => scrollTo(e, 'book-session')}
