@@ -5,6 +5,7 @@ import { WhyUs } from './components/WhyUs';
 import { Team } from './components/Team';
 import { BookSession } from './components/BookSession';
 import { About } from './components/About';
+import { Location } from './components/Location';
 import { CTA } from './components/CTA';
 import { Footer } from './components/Footer';
 
@@ -19,6 +20,7 @@ function App() {
         <Team />
         <BookSession />
         <About />
+        <Location />
         <CTA />
       </main>
       <Footer />
