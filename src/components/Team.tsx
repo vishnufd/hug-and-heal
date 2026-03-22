@@ -27,7 +27,7 @@ export function Team() {
               <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
             </div>
             <div className="p-8 md:p-10 relative flex flex-col">
-              <h4 className="text-2xl md:text-3xl font-bold font-display text-neutral-900 mb-2">MUHAMMED ISMAIL AYYANARI</h4>
+              <h4 className="text-2xl md:text-3xl font-bold font-display text-neutral-900 mb-2">DR. MUHAMMED ISMAIL AYYANARI</h4>
               <p className="text-brand-red font-semibold text-sm tracking-widest uppercase mb-8">SENIOR CONSULTANT PSYCHOLOGIST</p>
 
               <div className="mt-auto space-y-4 bg-neutral-50 p-6 rounded-2xl">

@@ -29,9 +29,10 @@ export function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {[
             {
-              icon: <Activity className="w-6 h-6 text-brand-red" />,
+              icon: <Activity className="w-6 h-6" />,
               title: "Psychotherapy",
-              desc: "In-depth therapy to address deep-rooted emotional and psychological issues."
+              desc: "In-depth therapy to address deep-rooted emotional and psychological issues.",
+              highlight: true
             },
             {
               icon: <MessageCircle className="w-6 h-6 text-brand-red" />,
@@ -96,16 +97,33 @@ export function Services() {
           ].map((service, idx, arr) => (
             <div
               key={idx}
-              className={`bg-white p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-neutral-100 hover:shadow-xl hover:border-brand-red/20 transition-all group hover:-translate-y-1 flex flex-col items-start ${idx === arr.length - 1
+              className={`p-6 rounded-2xl transition-all group hover:-translate-y-1 flex flex-col items-start ${
+                (service as any).highlight
+                  ? 'bg-linear-to-br from-brand-red to-rose-700 shadow-[0_12px_40px_rgba(220,38,38,0.35)] border border-rose-500/30 hover:shadow-[0_16px_48px_rgba(220,38,38,0.45)]'
+                  : 'bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-neutral-100 hover:shadow-xl hover:border-brand-red/20'
+              } ${idx === arr.length - 1
                 ? 'md:col-span-2 lg:col-span-3 xl:col-span-4 place-self-center w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)]'
                 : ''
-                }`}
+              }`}
             >
-              <div className="w-12 h-12 rounded-xl bg-brand-red/5 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-brand-red/10 transition-transform">
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform ${
+                (service as any).highlight
+                  ? 'bg-white/20 text-white'
+                  : 'bg-brand-red/5 group-hover:bg-brand-red/10 text-brand-red'
+              }`}>
                 {service.icon}
               </div>
-              <h4 className="text-lg font-bold font-display mb-2 text-neutral-900">{service.title}</h4>
-              <p className="text-sm text-neutral-500 leading-relaxed font-light">
+              {(service as any).highlight && (
+                <span className="inline-block text-[10px] font-semibold tracking-widest uppercase bg-white/20 text-white px-2.5 py-0.5 rounded-full mb-2">
+                  Featured
+                </span>
+              )}
+              <h4 className={`text-lg font-bold font-display mb-2 ${
+                (service as any).highlight ? 'text-white' : 'text-neutral-900'
+              }`}>{service.title}</h4>
+              <p className={`text-sm leading-relaxed font-light ${
+                (service as any).highlight ? 'text-rose-100' : 'text-neutral-500'
+              }`}>
                 {service.desc}
               </p>
             </div>
