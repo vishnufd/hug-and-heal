@@ -1,17 +1,19 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore/lite";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAFotdiP3J0ftcQBqbBBHbh5kvMUa6fqP8",
-  authDomain: "hug-and-heal.firebaseapp.com",
-  projectId: "hug-and-heal",
-  storageBucket: "hug-and-heal.firebasestorage.app",
-  messagingSenderId: "348016346995",
-  appId: "1:348016346995:web:018c61ec5904a435602706",
-  measurementId: "G-96NKX0FMMX"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase App
 const app = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(app);
+export const db = getFirestore(app);

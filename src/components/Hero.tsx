@@ -1,4 +1,5 @@
 import { Heart, CalendarCheck, ArrowRight, Activity } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 import banner from "../assets/banner.png"
 
@@ -22,7 +23,7 @@ export function Hero() {
             Professional Online Counseling & Psychotherapy tailored to your personal growth and mental well-being.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-4">
             <a
               href="#book-session"
               onClick={(e) => {
@@ -30,23 +31,18 @@ export function Hero() {
                 const el = document.getElementById('book-session');
                 if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
               }}
-              className="inline-flex items-center justify-center gap-2 bg-brand-red hover:bg-brand-red/80 text-white px-8 py-4 rounded-full font-medium text-lg transition-all shadow-md"
+              className="inline-flex items-center justify-center gap-2 bg-brand-red hover:bg-brand-red/80 text-white px-8 py-4 rounded-full font-medium text-lg transition-all shadow-md whitespace-nowrap w-full sm:w-auto md:w-full lg:w-auto"
             >
               <CalendarCheck size={20} />
               Pre-book a Session
             </a>
-            <a
-              href="#services"
-              onClick={(e) => {
-                e.preventDefault();
-                const el = document.getElementById('services');
-                if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
-              }}
-              className="inline-flex items-center justify-center gap-2 bg-white border border-neutral-200 hover:border-brand-red hover:text-brand-red text-neutral-800 px-8 py-4 rounded-full font-medium text-lg transition-all shadow-sm hover:shadow-md"
+            <Link
+              to="/campaign"
+              className="inline-flex items-center justify-center gap-2 bg-white border border-neutral-200 hover:border-brand-red hover:text-brand-red text-neutral-800 px-8 py-4 rounded-full font-medium text-lg transition-all shadow-sm hover:shadow-md whitespace-nowrap w-full sm:w-auto md:w-full lg:w-auto"
             >
-              Learn More
+              Join Our Campaign
               <ArrowRight size={20} />
-            </a>
+            </Link>
           </div>
         </div>
 

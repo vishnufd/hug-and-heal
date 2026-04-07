@@ -1,30 +1,25 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { Services } from './components/Services';
-import { WhyUs } from './components/WhyUs';
-import { Team } from './components/Team';
-import { BookSession } from './components/BookSession';
-import { About } from './components/About';
-import { Location } from './components/Location';
-import { CTA } from './components/CTA';
+import { Home } from './components/Home';
+import { Campaign } from './components/Campaign';
 import { Footer } from './components/Footer';
+import { ScrollToTop } from './components/ScrollToTop';
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col font-sans text-neutral-800">
-      <Navbar />
-      <main className="grow pt-24">
-        <Hero />
-        <Services />
-        <WhyUs />
-        <Team />
-        <BookSession />
-        <About />
-        <Location />
-        <CTA />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <ScrollToTop />
+      <div className="min-h-screen flex flex-col font-sans text-neutral-800">
+        <Navbar />
+        <main className="grow pt-24">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/campaign" element={<Campaign />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
